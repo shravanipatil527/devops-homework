@@ -10,7 +10,7 @@ In case of implementation along with Elasticsearch, HBase data is accessible eve
 
 Description
 -----------
-HBase is distributed database built on top of Apache hadoop. We can use Elasticsearch as indexing engine and storing data to safer data storage as HBase.
+HBase is distributed database built on top of Apache hadoop. We can use Elasticsearch as indexing engine and storing data to a safer data storage as HBase where Data is accessible even after its archival.
 
 Motivation
 ----------

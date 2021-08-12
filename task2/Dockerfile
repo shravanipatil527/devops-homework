@@ -5,8 +5,10 @@ USER root
 
 RUN apt-get update && apt-get install -y --no-install-recommends curl
 
-COPY ./nginx.conf /etc/nginx/nginx.conf
-COPY ./default.conf /etc/nginx/conf.d/default.conf
+#Define our static files location volume
+VOLUME /opt/html:/usr/share/nginx/html
+VOLUME /opt/html/nginx.conf:/etc/nginx/nginx.conf
+VOLUME /opt/html/default.conf:/etc/nginx/conf.d/default.conf
 
 # Add a new user "john" with user id 8877
 RUN useradd -u 8877 john
@@ -22,6 +24,3 @@ USER john
 
 # Expose ports
 EXPOSE 80
-
-#Define our static files location volume
-VOLUME /opt/html
